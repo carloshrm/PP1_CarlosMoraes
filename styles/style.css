@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* importa apenas a fonte https://fonts.google.com/specimen/Comfortaa, sem CSS */
+
+:root {
+    --bg-escuro: #002d4b;
+    --bg-claro: #5c0023;
+    --fg-escuro: #cedbdd;
+    --fg-claro: #fce4ac28;
+    --fg-dest: #F26052;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 70vw;
+    margin: 0 auto;
+    font-family: 'Comfortaa', cursive;
+    background-image: url("../images/pexels-miguel-á-padriñán-19670.jpg");
+    background-position: center;
+}
+
+main {
+    box-shadow: 1px 1px 4px px black;
+    margin: 1em;
+    backdrop-filter: blur(20px);
+}
+
+section {
+    padding: 2em;
+    border: 2px solid white;
+    background-color: var(--fg-claro);
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+#nav_container {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-escuro);
+    z-index: 1;
+}
+
+#header_principal {
+    text-align: center;
+}
+
+#header_principal h1 {
+    padding: 0.4em 0;
+}
+
+
+#nav_menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.nav_btn {
+    display: grid;
+    align-items: center;
+    padding: 0.6em 2em;
+    margin: 0 2em;
+}
+
+.nav_btn:hover {
+    background-color: var(--fg-escuro);
+    font-weight: bold;
+}
+
+.nav_btn:hover a {
+    color: black;
+}
+
+footer {
+    color: white;
+    background-color: var(--bg-escuro);
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0.4em 0;
+}
