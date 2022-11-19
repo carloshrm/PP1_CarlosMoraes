@@ -2,11 +2,13 @@
 /* importa apenas a fonte https://fonts.google.com/specimen/Comfortaa, sem CSS */
 
 :root {
-    --bg-escuro: #002d4b;
-    --bg-claro: #5c0023;
-    --fg-escuro: #cedbdd;
-    --fg-claro: #fce4ac28;
-    --fg-dest: #F26052;
+    --bg-escuro: #002b36;
+    --bg-escuro-t: #002d3894;
+    --bg-claro-t: #ffffffaf;
+    --bg-claro: #264d4e;
+    --fg-escuro: rgb(255, 255, 255);
+    --fg-claro: #b9fff6;
+    --fg-dest: #ff3725;
 }
 
 * {
@@ -18,20 +20,53 @@ body {
     width: 70vw;
     margin: 0 auto;
     font-family: 'Comfortaa', cursive;
-    background-image: url("../images/pexels-miguel-á-padriñán-19670.jpg");
+    background-image: url("../images/pexels-david-dibert-774664.jpg");
     background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(12px);
 }
 
-main {
-    box-shadow: 1px 1px 4px px black;
-    margin: 1em;
-    backdrop-filter: blur(20px);
+.section_lista,
+.section_simples {
+    margin: 0 2em;
 }
 
-section {
+.section_lista>div,
+.section_simples>div {
     padding: 2em;
-    border: 2px solid white;
-    background-color: var(--fg-claro);
+}
+
+.section_simples {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--bg-claro-t);
+}
+
+.section_lista {
+    color: white;
+    background-color: var(--bg-escuro-t);
+}
+
+.lista_catalogo {
+    padding: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section_lista_card {
+    color: black;
+    background-color: white;
+    margin: 1em;
+    padding: 2em;
+    width: 25vw;
+    height: fit-content;
+}
+
+img {
+    width: 100%;
 }
 
 a {
@@ -47,18 +82,20 @@ a {
 }
 
 #header_principal {
+    color: white;
     text-align: center;
+    font-weight: bold;
 }
 
 #header_principal h1 {
     padding: 0.4em 0;
 }
 
-
 #nav_menu {
     display: flex;
     list-style: none;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .nav_btn {
