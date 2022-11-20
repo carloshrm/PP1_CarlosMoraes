@@ -21,7 +21,7 @@
                 <a href="./atividades.html">Atividades</a>
             </li>
             <li class="nav_btn">
-                <a href="./sobre.html">Sobre nós</a>
+                <a href="./sobre.html">Localização</a>
             </li>
             <li class="nav_btn">
                 <a href="./contato.html">Contato</a>
@@ -29,8 +29,87 @@
         </ul>
     </nav>
     <main>
-        contato
+        <section class="section_simples">
+            <div>
+                <h1>Entre em contato e nos conte mais sobre sua experiencia com o gelo: </h1>
+            </div>
+            <div id="form">
+                <form name="info_gelo" id="info_gelo" action="./contatook.html">
+                    <fieldset>
+                        <legend>Informações Básicas: </legend>
+                        <div>
+                            <label for="nome">Nome: </label>
+                            <input type="text" name="nome" id="nome" placeholder="Fulano de Tal" required>
+                        </div>
+                        <div>
+                            <label for="cpf">CPF: </label>
+                            <input type="text" name="cpf" id="cpf" pattern=" \d{3}\.\d{3}\.\d{3}-\d{2}"
+                                placeholder="000.000.000-00">
+                        </div>
+                        <div>
 
+                            <label for="mail">Email: </label>
+                            <input type="email" name="mail" id="mail" placeholder="fulano@ciclano.br" required>
+                        </div>
+                        <div>
+                            <label for="nasc">Data de Nascimento: </label>
+                            <input type="date" name="nasc" id="nasc" max="2022-01-01">
+                        </div>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <Legend>Quais tipos de gelo, ou usos para o gelo te interessam mais: </legend>
+                        <fieldset>
+                            <legend>Natural: </legend>
+                            <input type="checkbox" name="gelo_interesse" value="nat_neve"> Neve
+                            <input type="checkbox" name="gelo_interesse" value="nat_geleira"> Geleiras
+                            <input type="checkbox" name="gelo_interesse" value="nat_berg"> Icebergs
+                            <input type="checkbox" name="gelo_interesse" value="nat_caverna"> Cavernas
+                            <input type="checkbox" name="gelo_interesse" value="nat_outro"> Outros
+                        </fieldset>
+                        <fieldset>
+                            <legend>Artificial: </legend>
+                            <input type="checkbox" name="gelo_interesse" value="arti_cubos"> Em cubos
+                            <input type="checkbox" name="gelo_interesse" value="arti_sorvete"> Sorvete / Raspadinha
+                            <input type="checkbox" name="gelo_interesse" value="arti_arte"> Como arte (esculturas,
+                            etc...)
+                            <input type="checkbox" name="gelo_interesse" value="arti_esp"> Esportes no Gelo
+                        </fieldset>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Você já fez gelo antes?</legend>
+                        <input type="radio" name="ja_fez_gelo" required> Sim
+                        <input type="radio" name="ja_fez_gelo" required> Não
+                        <fieldset disabled="disabled">
+                            <legend>Se não, planeja fazer um dia?</legend>
+                            <input type="radio" name="quer_fazer_gelo" required> Sim
+                            <input type="radio" name="quer_fazer_gelo" required> Não
+                        </fieldset>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Nos conte um pouco sobre o seu gelo: </legend>
+                        <div>
+                            <label for="gelo_pessoal">Gelo:</label>
+                            <select name="gelo_pessoal" id="gelo_pessoal">
+                                <option value="arte">Para Arte</option>
+                                <option value="beber">Para Beber</option>
+                                <option value="aprec">Para Apreciar</option>
+                            </select>
+                        </div>
+                        <br>
+                        <label for="contato_texto">Sua mensagem: </label> <br>
+                        <textarea name="contato_texto" id="contato_texto" maxlength="2000" cols="50" rows="4"
+                            required></textarea>
+                    </fieldset>
+                    <div class="info_gelo_btn">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Trabalho PII, SI-MC UFU, Carlos Moraes, 2022.</p>
