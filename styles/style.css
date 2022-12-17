@@ -5,7 +5,7 @@
     --bg-escuro: #003046;
     --bg-escuro-t: #1f2e318a;
     --bg-claro-t: #ffffffaf;
-    --bg-claro: #264d4e;
+    --bg-claro: #3b6061;
     --fg-escuro: #dbe5ec;
     --fg-claro: #ffffff;
 }
@@ -167,6 +167,10 @@ a {
     color: black;
 }
 
+.ativo {
+    background-color: var(--bg-claro);
+}
+
 #info_gelo {
     padding: 1em;
     color: white;
@@ -187,6 +191,14 @@ button {
     background-color: var(--fg-escuro);
 }
 
+fieldset {
+    margin-bottom: 0.8em;
+}
+
+fieldset:disabled {
+    color: rgba(211, 211, 211, 0.33);
+}
+
 .info_gelo_btn {
     width: fit-content;
     margin: 0 auto;
@@ -202,6 +214,19 @@ footer {
     align-items: center;
     width: 100%;
     padding: 0.4em 0;
+}
+
+.aviso {
+    font-weight: bold;
+    font-size: 0.8em;
+    color: rgb(216, 0, 0);
+    padding: 0.2em;
+    background-color: var(--bg-claro-t);
+    margin-left: 1em;
+}
+
+.erro {
+    border-color: red;
 }
 
 @media (max-width: 800px) {
@@ -226,4 +251,22 @@ footer {
         padding: 0.8em;
         width: 20vw;
     }
+}
+
+#confirma_cont {
+    position: absolute;
+    border: 1px solid white;
+    box-shadow: 5px 8px 8px var(--bg-escuro-t);
+    z-index: 1;
+    color: white;
+    background-color: var(--bg-escuro);
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2em;
+}
+
+#confirma_cont p {
+    margin: 1em;
 }
