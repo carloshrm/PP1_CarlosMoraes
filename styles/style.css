@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 /* importa apenas a fonte https://fonts.google.com/specimen/Comfortaa, sem CSS */
 
@@ -10,14 +11,20 @@
     --fg-claro: #ffffff;
 }
 
+._row {
+    justify-content: space-between;
+}
+
+#titulo_h1 {
+    transform: translateX(-100%);
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    width: 70vw;
-    margin: 0 auto;
+#cont_principal {
     font-family: 'Comfortaa', cursive;
     background-image: url("../images/pexels-david-dibert-774664.jpg");
     background-position: center;
@@ -51,28 +58,12 @@ p {
     margin: 0.6em 0;
 }
 
-.section_lista,
-.section_com_img,
-.section_simples {
-    margin: 0 2.4em;
-}
-
-.section_lista>div,
-.section_simples>div,
-.section_com_img>div {
-    padding: 2em;
-}
-
-.section_lista {
+.bg-escuro-t {
     color: white;
     background-color: var(--bg-escuro-t);
 }
 
-.section_com_img {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    justify-items: center;
+.bg-claro-t {
     background-color: var(--bg-claro-t);
 }
 
@@ -103,12 +94,9 @@ p {
     background-color: white;
 }
 
-
 .section_lista_card {
     color: black;
     background-color: white;
-    margin: 1em;
-    padding: 2em;
     width: 25vw;
     height: fit-content;
 }
@@ -151,9 +139,13 @@ a {
     flex-wrap: wrap;
 }
 
+li>i {
+    margin: 0 1em 0 0;
+}
+
 .nav_btn {
-    display: grid;
-    align-items: center;
+    min-width: 3em;
+    color: white;
     padding: 0.6em 2em;
     margin: 0 2em;
 }
@@ -227,30 +219,6 @@ footer {
 
 .erro {
     border-color: red;
-}
-
-@media (max-width: 800px) {
-    body {
-        width: 92vw;
-    }
-
-    .section_lista,
-    .section_com_img,
-    .section_simples {
-        margin: 0 1em;
-    }
-
-    .section_lista>div,
-    .section_simples>div,
-    .section_com_img>div {
-        padding: 1em;
-    }
-
-    .section_lista_card {
-        margin: 0.4em;
-        padding: 0.8em;
-        width: 20vw;
-    }
 }
 
 #confirma_cont {

@@ -2,6 +2,24 @@ const cpf_regex = /(\d{3}.){2}(\d{3}-\d{2})/gm;
 
 let formValido = false;
 
+$("#header_principal > h1").hover(function () {
+
+    $(this).filter(':not(:animated)').animate({
+        transform: 360
+    }, {
+        duration: 300,
+        easing: 'linear',
+        step: function (now, fx) {
+            $(this).css('transform', `rotateX(${now}deg)`);
+        }
+    });
+    $(this).promise().done(function () {
+        $(this).css('transform', `rotateX(0deg)`);
+    });
+
+});
+
+
 document.getElementById("form_confirma_btn").onclick = () => {
     const form = document.getElementById("info_gelo");
     validarForm(form);
@@ -55,7 +73,6 @@ function fazerBotoes() {
     limpar.onclick = reset;
     return [env, edit, limpar];
 }
-
 
 function fazerElementoConfirmacao(nome, info) {
     const dadosLabel = document.querySelector(`#info_gelo label[for*='${nome}']`);
@@ -195,3 +212,4 @@ function mostrarIdade(val) {
     const p = document.forms[0].nasc.parentElement.querySelector("p");
     p.innerText = `Idade: ${isNaN(val) ? "--" : val}`;
 }
+
