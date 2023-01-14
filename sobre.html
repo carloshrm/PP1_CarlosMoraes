@@ -10,14 +10,14 @@
     <title>Associação dos Apreciadores de Gelo</title>
 </head>
 
-<body id="cont_principal">
-    <header id="header_principal">
-        <h1>Associação dos Apreciadores de Gelo</h1>
+<body id="cont_principal" class="container-xl">
+    <header id="header_principal" class="jumbotron">
+        <h1 class="display-6">Associação dos Apreciadores de Gelo</h1>
     </header>
     <nav id="nav_container">
         <ul id="nav_menu">
             <li class="nav_btn">
-                <i class="bi bi-house"></i>
+                <i class="bi bi-house-fill"></i>
                 <a href="./index.html">Home</a>
             </li>
             <li class="nav_btn">
@@ -29,52 +29,85 @@
                 <a href="./sobre.html">Localização</a>
             </li>
             <li class="nav_btn">
-                <i class="bi bi-chat-dots"></i>
+                <i class="bi bi-chat-dots-fill"></i>
                 <a href="./contato.html">Contato</a>
             </li>
         </ul>
     </nav>
-    <main>
-        <section class="section_lista">
-            <div>
-                <h1>Fotos: </h1>
+    <section class="container-xl text-center bg-claro-t p-4">
+        <div class="p-2">
+            <h2>Fotos</h2>
+        </div>
+    </section>
+    <section id="sobre_carousel" class="container bg-escuro-t">
+        <div id="fotos_sobre_carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner bg-escuro-t">
+                <div class="carousel-item">
+                    <img src="./images/pexels-valdemaras-d-1670845.jpg" alt="pedras de gelo em volta de um homem">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/pexels-евгений-шухман-11081046.jpg" alt="grandes estalactites de gelo">
+                </div>
+                <div class="carousel-item active">
+                    <img src="./images/pexels-julia-volk-7099865.jpg" alt="pequenas estalactites de gelo">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/pexels-matheus-bertelli-4558481.jpg" alt="camadas de gelo">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/pexels-sami-anas-5137655.jpg" alt="terra congelada">
+                </div>
             </div>
-            <div class="lista_galeria">
-                <img src="./images/pexels-julia-volk-7099865.jpg" alt="pequenas estalactites de gelo">
-                <img src="./images/pexels-valdemaras-d-1670845.jpg" alt="pedras de gelo em volta de um homem">
-                <img src="./images/pexels-евгений-шухман-11081046.jpg" alt="grandes estalactites de gelo">
-                <img src="./images/pexels-matheus-bertelli-4558481.jpg" alt="camadas de gelo">
-                <img src="./images/pexels-sami-anas-5137655.jpg" alt="terra congelada">
-            </div>
-        </section>
-        <section class="section_com_img">
-            <div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="container bg-escuro-t p-4">
+        <div class="row _row">
+            <div class="col-3 text-center">
                 <h1>Localização:</h1>
                 <p>Venha visitar nossa sede no polo norte! O sol nunca se poe, nosso fuso horário tecnicamente não
                     existe, e você pode encontrar ursos polares no caminho!</p>
             </div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5031618.547533019!2d-144.39361762816176!3d71.52377243924818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f9344da9515b951%3A0x4518d0c4d5c68876!2sNorth%20Pole!5e0!3m2!1sja!2sus!4v1668881969770!5m2!1sja!2sus"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section class="section_lista">
-            <div>
-                <h1>Fontes</h1>
-                <p>As imagens utilizadas nesse site foram retiradas de <a
-                        href="https://www.pexels.com/license/">https://www.pexels.com/</a>.
-                </p>
-                <p>Informações e curiosidades sobre o gelo e polo norte foram retiradas de <a
-                        href="https://www.infopedia.pt/">Infopedia</a>.
-                </p>
-                <p>A página está hospedada no serviço <a
-                        href="https://azure.microsoft.com/en-us/products/app-service/static/">Azure Static Web Apps</a>,
-                    e seu
-                    código
-                    fonte pode ser lido <a href="https://github.com/carloshrm/PP1_CarlosMoraes">neste repositorio</a>.
-                </p>
-            </div>
-        </section>
-    </main>
+                class="p2 col-7" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section class="container p-4 bg-claro-t">
+        <div id="sobre_info">
+            <h1>Fontes</h1>
+            <p>As imagens utilizadas nesse site foram retiradas de <a
+                    href="https://www.pexels.com/license/">https://www.pexels.com/</a>.
+            </p>
+            <p>Informações e curiosidades sobre o gelo e polo norte foram retiradas de <a
+                    href="https://www.infopedia.pt/">Infopedia</a>.
+            </p>
+            <p>A página está hospedada no serviço <a
+                    href="https://azure.microsoft.com/en-us/products/app-service/static/">Azure Static Web Apps</a>,
+                e seu
+                código
+                fonte pode ser lido <a href="https://github.com/carloshrm/PP1_CarlosMoraes">neste repositorio</a>.
+            </p>
+        </div>
+    </section>
+    <section class="container bg-dark" id="bc_cont">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="./index.html">AAG</a></li>
+                <li class="breadcrumb-item active"><a href="./sobre.html">Localização</a></li>
+            </ol>
+        </nav>
+        <p id="badge" class="badge badge-info"></p>
+    </section>
     <footer>
         <p>Trabalho PII, SI-MC UFU, Carlos Moraes, 2022.</p>
         <a href="https://github.com/carloshrm/PP1_CarlosMoraes">Codigo Fonte</a>

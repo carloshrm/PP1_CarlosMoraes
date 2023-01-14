@@ -10,14 +10,16 @@
     <title>Associação dos Apreciadores de Gelo</title>
 </head>
 
-<body id="cont_principal">
-    <header id="header_principal">
-        <h1>Associação dos Apreciadores de Gelo</h1>
+<body id="cont_principal" class="container-xl">
+
+    <!-- header -->
+    <header id="header_principal" class="jumbotron">
+        <h1 class="display-6">Associação dos Apreciadores de Gelo</h1>
     </header>
     <nav id="nav_container">
         <ul id="nav_menu">
             <li class="nav_btn">
-                <i class="bi bi-house"></i>
+                <i class="bi bi-house-fill"></i>
                 <a href="./index.html">Home</a>
             </li>
             <li class="nav_btn">
@@ -25,7 +27,7 @@
                 <a href="./atividades.html">Atividades</a>
             </li>
             <li class="nav_btn">
-                <i class="bi bi-geo-alt"></i>
+                <i class="bi bi-geo-alt-fill"></i>
                 <a href="./sobre.html">Localização</a>
             </li>
             <li class="nav_btn ativo">
@@ -34,13 +36,22 @@
             </li>
         </ul>
     </nav>
-    <main>
-        <section class="section_simples">
-            <div>
-                <h1>Agradecemos o seu contato!</h1>
-            </div>
-        </section>
-    </main>
+
+    <section class="jumbotron bg-claro-t p-4">
+        <div>
+            <h1 class="display-4">Agradecemos o seu contato!</h1>
+        </div>
+    </section>
+    <section class="container bg-dark" id="bc_cont">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="./index.html">AAG</a></li>
+                <li class="breadcrumb-item active"><a href="./contato.html">Contato</a></li>
+                <li class="breadcrumb-item active"><a href="./contatook.html">Confirmação de Contato</a></li>
+            </ol>
+        </nav>
+        <p id="badge" class="badge badge-info"></p>
+    </section>
     <footer>
         <p>Trabalho PII, SI-MC UFU, Carlos Moraes, 2022.</p>
         <a href="https://github.com/carloshrm/PP1_CarlosMoraes">Codigo Fonte</a>

@@ -11,13 +11,14 @@
 </head>
 
 <body id="cont_principal">
-    <header id="header_principal">
-        <h1>Associação dos Apreciadores de Gelo</h1>
+    <!-- header -->
+    <header id="header_principal" class="jumbotron">
+        <h1 class="display-6">Associação dos Apreciadores de Gelo</h1>
     </header>
     <nav id="nav_container">
         <ul id="nav_menu">
             <li class="nav_btn">
-                <i class="bi bi-house"></i>
+                <i class="bi bi-house-fill"></i>
                 <a href="./index.html">Home</a>
             </li>
             <li class="nav_btn">
@@ -25,7 +26,7 @@
                 <a href="./atividades.html">Atividades</a>
             </li>
             <li class="nav_btn">
-                <i class="bi bi-geo-alt"></i>
+                <i class="bi bi-geo-alt-fill"></i>
                 <a href="./sobre.html">Localização</a>
             </li>
             <li class="nav_btn ativo">
@@ -34,101 +35,128 @@
             </li>
         </ul>
     </nav>
-    <main>
-        <section class="section_simples">
-            <div>
-                <h1>Entre em contato e nos conte mais sobre sua experiencia com o gelo: </h1>
-            </div>
-            <div id="form">
-                <form name="info_gelo" id="info_gelo" action="./contatook.html">
-                    <fieldset>
-                        <legend>Informações Básicas: </legend>
-                        <div>
-                            <label for="nome">Nome: </label>
-                            <input type="text" name="nome" id="nome" placeholder="Fulano de Tal">
-                        </div>
-                        <div>
-                            <label for="cpf">CPF: </label>
-                            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
-                        </div>
-                        <div>
+    <!-- header fim -->
+    <section class="container p-4 bg-claro-t">
+        <div>
+            <h1>Entre em contato e nos conte mais sobre sua experiencia com o gelo: </h1>
+        </div>
+        <div id="form">
+            <form name="info_gelo" id="info_gelo" action="./contatook.html">
+                <fieldset>
+                    <legend>Informações Básicas: </legend>
+                    <div>
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome" id="nome" placeholder="Fulano de Tal">
+                    </div>
+                    <div>
+                        <label for="cpf">CPF: </label>
+                        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
+                    </div>
+                    <div>
 
-                            <label for="mail">Email: </label>
-                            <input type="email" name="mail" id="mail" placeholder="fulano@ciclano.br">
-                        </div>
-                        <div>
-                            <label for="nasc">Data de Nascimento: </label>
-                            <input type="date" name="nasc" id="nasc" min="1900-01-01" max="2010-01-01">
-                            <p>Idade: </p>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <Legend>Quais tipos de gelo, ou usos para o gelo te interessam mais: </legend>
-                        <fieldset>
-                            <legend>Natural: </legend>
-                            <label hidden for="gelo_interesse_n">Gelos Naturais: </label>
-                            <input type="checkbox" name="gelo_interesse_n" value="neve"> Neve
-                            <input type="checkbox" name="gelo_interesse_n" value="geleiras"> Geleiras
-                            <input type="checkbox" name="gelo_interesse_n" value="icebergs"> Icebergs
-                            <input type="checkbox" name="gelo_interesse_n" value="cavernas"> Cavernas
-                            <input type="checkbox" name="gelo_interesse_n" value="outros"> Outros
-                        </fieldset>
-                        <fieldset>
-                            <legend>Artificial: </legend>
-                            <label hidden for="gelo_interesse_a">Gelos Artificiais: </label>
-                            <input type="checkbox" name="gelo_interesse_a" value="em cubos"> Em cubos
-                            <input type="checkbox" name="gelo_interesse_a" value="sorvete"> Sorvete / Raspadinha
-                            <input type="checkbox" name="gelo_interesse_a" value="como arte"> Como arte (esculturas,
-                            etc...)
-                            <input type="checkbox" name="gelo_interesse_a" value="para esportes"> Esportes no Gelo
-                        </fieldset>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Você já fez gelo antes?</legend>
-                        <label hidden for="ja_fez_gelo">Já fez gelo? </label>
-                        <input type="radio" name="ja_fez_gelo" value="sim" checked> Sim
-                        <input type="radio" name="ja_fez_gelo" value="não"> Não
-                        <fieldset disabled id="qf_select">
-                            <legend>Se não, planeja fazer um dia?</legend>
-                            <label hidden for="quer_fazer_gelo">Quer fazer? </label>
-                            <input type="radio" name="quer_fazer_gelo" value="sim" checked> Sim
-                            <input type="radio" name="quer_fazer_gelo" value="não"> Não
-                        </fieldset>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Nos conte um pouco sobre o seu gelo: </legend>
-                        <div>
-                            <label for="gelo_pessoal">Seu gelo:</label>
-                            <select name="gelo_pessoal" id="gelo_pessoal">
-                                <option value="para arte">Para Arte</option>
-                                <option value="para beber">Para Beber</option>
-                                <option value="para apreciar">Para Apreciar</option>
-                            </select>
-                        </div>
-                        <label for="contato_texto">Sua mensagem: </label>
-                        <textarea name="contato_texto" id="contato_texto" maxlength="2000" cols="50"
-                            rows="4"></textarea>
-                    </fieldset>
-                    <div class="info_gelo_btn">
-                        <button id="form_confirma_btn" type="button">Confirmar</button>
-                        <button type="reset">Limpar</button>
+                        <label for="mail">Email: </label>
+                        <input type="email" name="mail" id="mail" placeholder="fulano@ciclano.br">
                     </div>
-                    <div id="confirma_cont" class="modal" hidden>
+                    <div>
+                        <label for="nasc">Data de Nascimento: </label>
+                        <input type="date" name="nasc" id="nasc" min="1900-01-01" max="2010-01-01">
+                        <p>Idade: </p>
                     </div>
-                </form>
-            </div>
-        </section>
-    </main>
+                </fieldset>
+                <fieldset>
+                    <Legend>Quais tipos de gelo, ou usos para o gelo te interessam mais: </legend>
+                    <fieldset>
+                        <legend>Natural: </legend>
+                        <label hidden for="gelo_interesse_n">Gelos Naturais: </label>
+                        <input type="checkbox" name="gelo_interesse_n" value="neve"> Neve
+                        <input type="checkbox" name="gelo_interesse_n" value="geleiras"> Geleiras
+                        <input type="checkbox" name="gelo_interesse_n" value="icebergs"> Icebergs
+                        <input type="checkbox" name="gelo_interesse_n" value="cavernas"> Cavernas
+                        <input type="checkbox" name="gelo_interesse_n" value="outros"> Outros
+                    </fieldset>
+                    <fieldset>
+                        <legend>Artificial: </legend>
+                        <label hidden for="gelo_interesse_a">Gelos Artificiais: </label>
+                        <input type="checkbox" name="gelo_interesse_a" value="em cubos"> Em cubos
+                        <input type="checkbox" name="gelo_interesse_a" value="sorvete"> Sorvete / Raspadinha
+                        <input type="checkbox" name="gelo_interesse_a" value="como arte"> Como arte (esculturas,
+                        etc...)
+                        <input type="checkbox" name="gelo_interesse_a" value="para esportes"> Esportes no Gelo
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Você já fez gelo antes?</legend>
+                    <label hidden for="ja_fez_gelo">Já fez gelo? </label>
+                    <input type="radio" name="ja_fez_gelo" value="sim" checked> Sim
+                    <input type="radio" name="ja_fez_gelo" value="não"> Não
+                    <fieldset disabled id="qf_select">
+                        <legend>Se não, planeja fazer um dia?</legend>
+                        <label hidden for="quer_fazer_gelo">Quer fazer? </label>
+                        <input type="radio" name="quer_fazer_gelo" value="sim" checked> Sim
+                        <input type="radio" name="quer_fazer_gelo" value="não"> Não
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Nos conte um pouco sobre o seu gelo: </legend>
+                    <div>
+                        <label for="gelo_pessoal">Seu gelo:</label>
+                        <select name="gelo_pessoal" id="gelo_pessoal">
+                            <option value="para arte">Para Arte</option>
+                            <option value="para beber">Para Beber</option>
+                            <option value="para apreciar">Para Apreciar</option>
+                        </select>
+                    </div>
+                    <label for="contato_texto">Sua mensagem: </label>
+                    <textarea name="contato_texto" id="contato_texto" maxlength="2000" cols="50" rows="4"></textarea>
+                </fieldset>
+                <div class="info_gelo_btn">
+                    <button id="form_confirma_btn" type="button" class="btn btn-primary">Confirmar</button>
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="container bg-dark" id="bc_cont">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="./index.html">AAG</a></li>
+                <li class="breadcrumb-item active"><a href="./contato.html">Contato</a></li>
+            </ol>
+        </nav>
+        <p id="badge" class="badge badge-info"></p>
+    </section>
+
     <footer>
         <p>Trabalho PII, SI-MC UFU, Carlos Moraes, 2022.</p>
         <a href="https://github.com/carloshrm/PP1_CarlosMoraes">Codigo Fonte</a>
         <p>Imagens do site <a href="https://www.pexels.com/search/ice/">Pexels</a></p>
     </footer>
+    <!-- modal -->
+    <div class="modal fade" id="confirma_cont" tabindex="-1" aria-labelledby="confirma_cont" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirma_contLabel">Confirme suas Informações: </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button id="envia_form" type="button" class="btn btn-primary">Confirmar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
 </body>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 <script src="./scripts/main.js"></script>
+<script src="./scripts/form.js"></script>
 
 </html>
